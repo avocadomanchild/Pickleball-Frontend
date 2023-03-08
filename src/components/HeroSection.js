@@ -2,12 +2,25 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
+import { useRef } from 'react';
+
 
 function HeroSection() {
+  
+
   return (
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>ADVENTURE AWAITS</h1>
+      <video src='/videos/video-3.mp4' autoPlay loop muted />
+      {/* <video
+        src='/videos/video-3.mp4'
+        autoPlay
+        loop
+        muted
+        playsInline
+        ref={videoRef}
+        onEnded={handleVideoEnded}
+      /> */}
+      <h1>PLAY TODAY</h1>
       <p>What are you waiting for?</p>
       <div className='hero-btns'>
         <Button

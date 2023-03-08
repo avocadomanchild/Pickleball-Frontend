@@ -5,38 +5,38 @@ import CardItem from './CardItem';
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Check out these EPIC Destinations!</h1>
+      <h1>Choose what you want to play!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
-              label='Adventure'
+              src='PPhotos/image-4.jpg'
+              text='Ascend the Ladder and Claim the Top Spot.'
+              label='Ladders'
               path='/services'
             />
             <CardItem
-              src='images/img-2.jpg'
-              text='Travel through the Islands of Bali in a Private Cruise'
-              label='Luxury'
+              src='PPhotos/image-5.jpg'
+              text='Find a thrilling league nearby and form new Freindships '
+              label='Leauges'
               path='/services'
             />
           </ul>
           <ul className='cards__items'>
             <CardItem
-              src='images/img-3.jpg'
-              text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-              label='Mystery'
+              src='PPhotos/image-3.jpg'
+              text='      Unleash your skills and compete to become the ultimate champion  '
+              label='Tournaments'
               path='/services'
             />
             <CardItem
-              src='images/img-4.jpg'
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
+              src='PPhotos/image-2.jfif'
+              text='Find a Hitting Partner Today'
+              label='Matching'
               path='/products'
             />
             <CardItem
-              src='images/img-8.jpg'
+              src='PPhotos/image-1.jpg'
               text='Ride through the Sahara Desert on a guided camel tour'
               label='Adrenaline'
               path='/sign-up'
