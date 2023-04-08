@@ -17,7 +17,7 @@ function Cards() {
             />
             <CardItem
               src='PPhotos/image-5.jpg'
-              text='Find a thrilling league nearby and form new Freindships '
+              text='Find a thrilling league nearby and form new friendships '
               label='Leauges'
               path='/services'
             />
@@ -37,7 +37,7 @@ function Cards() {
             />
             <CardItem
               src='PPhotos/image-1.jpg'
-              text='Ride through the Sahara Desert on a guided camel tour'
+              text='Improve while having fun'
               label='Adrenaline'
               path='/sign-up'
             />

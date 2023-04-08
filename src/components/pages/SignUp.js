@@ -1,16 +1,11 @@
 // import React from 'react';
 import '../../App.css';
-
-// export default function SignUp() {
-//   return <h1 className='sign-up'>LIKE & SUBSCRIBE</h1>;
-// }
-
-
 import React, { useState } from "react";
-// import logo from './logo.svg';
 import './../SignUp.css';
 import { Login } from "./Login";
-import { Register } from "./Register";
+// import { Register } from "./Register";
+import  CodeEvolutionForm from './CodeEvolutionForm';
+import PostForm from './Postform';
 
 function SignUp() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -22,7 +17,7 @@ function SignUp() {
   return (
     <div className="SignUp">
       {
-        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
+        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <CodeEvolutionForm  onFormSwitch={toggleForm} />
       }
     </div>
   );

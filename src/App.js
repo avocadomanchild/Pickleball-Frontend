@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
+import register from './utlis/register2'
+import CodeEvolutionForm from './components/pages/CodeEvolutionForm';
+// import register from './components/Pages2/register2';
 
 function App() {
   return (
@@ -17,6 +20,7 @@ function App() {
           <Route path='/services' component={Services} />
           <Route path='/products' component={Products} />
           <Route path='/sign-up' component={SignUp} />
+          <Route path='/codeEvo' component={CodeEvolutionForm} />
         </Switch>
       </Router>
     </>
