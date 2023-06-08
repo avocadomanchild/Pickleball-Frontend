@@ -1,8 +1,7 @@
-// import React from 'react';
 import '../../App.css';
 import React, { useState } from "react";
 import './../SignUp.css';
-import { Login } from "./Login";
+import Login from './Login';
 // import { Register } from "./Register";
 import  CodeEvolutionForm from './CodeEvolutionForm';
 import PostForm from './Postform';

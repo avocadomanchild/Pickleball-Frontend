@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { LoginContext } from '../App';
 
 
 function Navbar() {
+  // const loggedIn = useContext(LoginContext)
+  const [loggedIn] = useContext(LoginContext);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  // const [loggedIn, setLoggedIn] = useState(false); 
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -22,6 +26,10 @@ function Navbar() {
   useEffect(() => {
     showButton();
   }, []);
+
+  useEffect (() => {
+  console.log(loggedIn); 
+  });
 
   window.addEventListener('resize', showButton);
 
@@ -73,6 +81,7 @@ function Navbar() {
 
             <li>
               <Link
+              // to={loggedIn ? '/logout' : '/login'}
                 to='/sign-up'
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
@@ -80,8 +89,10 @@ function Navbar() {
                 Sign Up
               </Link>
             </li>
-          </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          </ul> 
+          {button && <Button buttonStyle='btn--outline'>{loggedIn ? 'LOGOUT' : 'SIGNUP'}</Button>}
+          {/* {button && <Button buttonStyle='btn--outline'>{loggedIn ? 'SIGN UP' : 'LOGOUT'}</Button>} */}
+          {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
         </div>
       </nav>
     </>

@@ -1,9 +1,11 @@
 
 import { withRouter } from 'react-router-dom';
-import React, { Component } from 'react';
+import React, { Component ,useState} from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+
+
 
 const initialValues = {
 
@@ -22,11 +24,20 @@ const validationSchema = Yup.object({
 });
 
 class CodeEvolutionForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loggedIn: false
+    };
+  }
   onSubmit = async (values, { setFieldError }) => {
     console.log('Form data', values);
     try {
+
       const response = await axios.post('http://localhost:8080/register', values);
+      this.setState({ loggedIn: true }); 
       this.props.history.push('/');
+
       // Do something with the response
     } catch (error) {
       if (error.response && error.response.data && error.response.data.error) {

@@ -8,6 +8,9 @@
   /* background-image: linear-gradient(79deg, #1982a8, #4f80a1 48%, #ebcd7d); */
   /* background-image: linear-gradient(79deg, #0074D9, #4da6ff 48%, #f3e8c9); */
   background-image: url("../Pics2/image-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .auth-form-container, .login-form, .register-form, .formik-form {
