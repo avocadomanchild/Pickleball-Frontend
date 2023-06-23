@@ -1,0 +1,38 @@
+.form-control {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.form-control label {
+  text-align: left;
+  padding: 0.25rem 0;
+  width: 150px;
+  display: inline-block;
+}
+
+.form-control input {
+  margin: 0.10rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 12px;
+  flex: 1;
+  display: inline-block;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #7439db;
+  margin-top: 0.5rem;
+  width: 200px;
+  height: 50px;
+}

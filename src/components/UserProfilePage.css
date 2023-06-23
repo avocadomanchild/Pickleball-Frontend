@@ -1,0 +1,166 @@
+
+.UserProfile {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /* background-image: linear-gradient(79deg, #1982a8, #4f80a1 48%, #ebcd7d); */
+  /* background-image: linear-gradient(79deg, #0074D9, #4da6ff 48%, #f3e8c9); */
+  /* background-image: url("../Pics2/image-2.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .auth-form-container, .login-form, .register-form, .formik-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px ;
+  /* padding: 3rem; /* increase or decrease the padding value */
+ 
+
+
+
+
+/* @media screen and (min-width: 600px) {
+  .auth-form-container {
+    padding: 7rem;
+    border: 1px solid rgba(53, 82, 107, 0.5);
+    border-radius: 10px;
+    margin: 0.5rem;
+    background-color: rgba(53, 82, 107, 0.5);
+  }
+} */
+
+ .form-control1 {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: left; /* Horizontally center the content */
+  margin-left: 15%;
+  margin-top: 3%;
+  /* align-items: center; Vertically center the content */
+
+
+}
+
+
+.form-control1 label {
+  /* text-align: left; */
+  padding: 0.25rem 0;
+  display: inline-block;
+  /* display: flex; */
+  align-self: left;
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+}
+
+
+
+.form-control1 input {
+  
+  /* width: 20px;
+  height: 20px;
+  margin: 0px 5px;
+  
+   margin: 0.10rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 12px ;  */
+  display: inline-block;
+  position: relative;
+
+} 
+
+
+.save-button{
+  margin-left: 15%;
+}
+
+
+
+/* .save-button {
+  border: none;
+  background-color: rgb(16, 3, 3);
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #7439db;
+  margin-top: 0.5rem;
+  width: 200px;
+  height: 50px;
+  margin-left: 15%;
+  
+
+} */
+
+  /* .edit-button {
+    background-color: aqua;
+    align-self: flex-start;
+    margin-left: 15%;
+  }
+  */
+
+
+.photo-upload-container {
+  position: relative;
+}
+
+.empty-photo-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #e4e4e4;
+  background-image: url('/PPhotos/avatar.jpg');
+  /* Replace with the path to your empty avatar image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 48px;
+  position: relative;
+}
+
+.upload-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.upload-icon i {
+  font-size: 24px;
+}
+
+.uploaded-photo {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* .save-button {
+  background-color: aqua;
+  align-self: flex-start;
+} */
+
+
+
+.material-icons-outlined {
+  color: #556af3;
+  transition: color 0.3s ease;
+}
+
+.material-icons-outlined:hover {
+  color: #ff0000; /* Replace with your desired hover color */
+}

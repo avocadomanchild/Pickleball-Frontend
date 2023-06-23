@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import './Navbar.css';
 import { LoginContext } from '../App';
 
@@ -10,6 +10,7 @@ function Navbar() {
   const [loggedIn] = useContext(LoginContext);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const history = useHistory();
   // const [loggedIn, setLoggedIn] = useState(false); 
 
   const handleClick = () => setClick(!click);
@@ -47,8 +48,8 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home 
+              <Link to='/inline' className='nav-links' onClick={closeMobileMenu}>
+                Profile 
               </Link>
             </li>
             <li className='nav-item'>
@@ -77,20 +78,10 @@ function Navbar() {
               >
                 Tournaments
               </Link>
-            </li>
-
-            <li>
-              <Link
-              // to={loggedIn ? '/logout' : '/login'}
-                to='/sign-up'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Sign Up
-              </Link>
-            </li>
-          </ul> 
-          {button && <Button buttonStyle='btn--outline'>{loggedIn ? 'LOGOUT' : 'SIGNUP'}</Button>}
+            </li>   
+          </ul>  
+   
+          {button && <Button buttonStyle='btn--outline'>{loggedIn ? 'LOGOUT' : 'SIGN UP'}</Button>}
           {/* {button && <Button buttonStyle='btn--outline'>{loggedIn ? 'SIGN UP' : 'LOGOUT'}</Button>} */}
           {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
         </div>

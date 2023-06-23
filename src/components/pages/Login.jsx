@@ -200,14 +200,23 @@ const Login = ({ onFormSwitch }) => {
   const history = useHistory();
   // const {loggedIn, setLoggedIn} = useContext(LoginContext);
   const [loggedIn, setLoggedIn] = useContext(LoginContext);
+  const storeTokens = (accessToken, refreshToken) => {
+    // Store the tokens in local storage or session storage
+    localStorage.setItem('accessToken', accessToken);
+    localStorage.setItem('refreshToken', refreshToken);
+  };
   const onSubmit = async (values, { setFieldError }) => {
     console.log('Form data', values);
     try {
       const response = await axios.post('http://localhost:8080/auth', values);
       setLoggedIn(true);
-      // console.log(loggedIn)
+      console.log(response)
+      storeTokens(response.data.accessToken, response.data.refreshToken);
       history.push('/');
+
+      
     } catch (error) {
+
       console.log(error);
       if (error.response && error.response.data.includes('Invalid Password')) {
         setFieldError('password', 'Invalid password.');

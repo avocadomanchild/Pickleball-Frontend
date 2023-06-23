@@ -1,4 +1,4 @@
-import React,{createContext, useContext, useState} from 'react';
+import React,{createContext, useContext, useState,useEffect} from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
@@ -7,16 +7,19 @@ import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import CodeEvolutionForm from './components/pages/CodeEvolutionForm'; 
-
-
-// import { LoginContext } from './components/context_state/login_state';
-// import { LoginProvider } from './components/context_state/login_state'
-// import { createContext } from 'react';
+import UserProfilePage from './components/pages/UserProfile';
+import InlineFormExample from './components/pages/Inlineform';
 
 
 export const LoginContext = createContext(); 
 function App() {
-  const[loggedIn,setLoggedin] = useState(false)
+  // const[loggedIn,setLoggedin] = useState(false)
+  const[loggedIn,setLoggedin] = useState(localStorage.access ? true : false )
+  useEffect(() => {
+    console.log(localStorage.access);
+    console.log(loggedIn); 
+  }, []);
+ 
   // const[loggedIn,setLoggedin] = useState(false)
   return (
     <LoginContext.Provider value={[loggedIn,setLoggedin]}>
@@ -28,6 +31,8 @@ function App() {
           <Route path='/products' component={Products} />
           <Route path='/sign-up' component={SignUp} />
           <Route path='/codeEvo' component={CodeEvolutionForm} />
+          {/* <Route path= '/profile' component={UserProfilePage} /> */}
+          <Route path = '/inline' component={InlineFormExample} />
         </Switch>
       </Router>
     </LoginContext.Provider>
