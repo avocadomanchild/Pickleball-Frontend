@@ -31,7 +31,6 @@ function App() {
           <Route path='/products' component={Products} />
           <Route path='/sign-up' component={SignUp} />
           <Route path='/codeEvo' component={CodeEvolutionForm} />
-          {/* <Route path= '/profile' component={UserProfilePage} /> */}
           <Route path = '/inline' component={InlineFormExample} />
         </Switch>
       </Router>
