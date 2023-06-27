@@ -1,0 +1,29 @@
+.div_navbar_profile {
+  display: inline;
+
+ 
+}
+
+.ul_navbar_profile li {
+  list-style-type: none;
+  padding: 20px;
+  cursor: pointer;
+  display: inline;
+  margin-left: 30px;
+
+}
+
+.tab-content{
+  margin-left: 60px;
+
+}
+
+
+.navbar_profile li.active {
+  background-color: #f0f0f0;
+}
+
+.tab-content {
+  margin-top: 10px;
+
+}

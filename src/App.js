@@ -7,9 +7,8 @@ import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import CodeEvolutionForm from './components/pages/CodeEvolutionForm'; 
-import UserProfilePage from './components/pages/UserProfile';
 import InlineFormExample from './components/pages/Inlineform';
-
+import Profile from './components/pages/Profilepage';
 
 export const LoginContext = createContext(); 
 function App() {
@@ -31,7 +30,7 @@ function App() {
           <Route path='/products' component={Products} />
           <Route path='/sign-up' component={SignUp} />
           <Route path='/codeEvo' component={CodeEvolutionForm} />
-          <Route path = '/inline' component={InlineFormExample} />
+          <Route path = '/inline' component={Profile} />
         </Switch>
       </Router>
     </LoginContext.Provider>

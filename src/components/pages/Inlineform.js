@@ -60,7 +60,7 @@ const tailFormItemLayout = {
   },
 };
 
-const App: React.FC = () => {
+const Inline_Form: React.FC = () => {
   const [formVisible, setFormVisible] = useState(false);
   const [form] = Form.useForm();
   const handleEditProfile = () => {
@@ -191,42 +191,7 @@ const App: React.FC = () => {
       </Form.Item>
 
 
-      {/* <Form.Item
-        name="password"
-        label="Password"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your password!',
-          },
-        ]}
-        hasFeedback
-      >
-        <Input.Password />
-      </Form.Item> */}
-
-      {/* <Form.Item
-        name="confirm"
-        label="Confirm Password"
-        dependencies={['password']}
-        hasFeedback
-        rules={[
-          {
-            required: true,
-            message: 'Please confirm your password!',
-          },
-          ({ getFieldValue }) => ({
-            validator(_, value) {
-              if (!value || getFieldValue('password') === value) {
-                return Promise.resolve();
-              }
-              return Promise.reject(new Error('The new password that you entered do not match!'));
-            },
-          }),
-        ]}
-      >
-        <Input.Password />
-      </Form.Item> */} 
+   
       <Form.Item
         name="address"
         label="Address"
@@ -279,16 +244,6 @@ const App: React.FC = () => {
           </Form.Item>
       </Form.Item>
 
-      {/* <Form.Item
-        name="residence"
-        label="Habitual Residence"
-        rules={[
-          { type: 'array', required: true, message: 'Please select your habitual residence!' },
-        ]}
-      >
-        <Cascader options={residences} />
-      </Form.Item> */}
-
       <Form.Item
         name="nickname"
         label="Nickname"
@@ -338,39 +293,7 @@ const App: React.FC = () => {
           <Option value="other">Other</Option>
         </Select>
       </Form.Item>
-{/* 
-      <Form.Item label="Captcha" extra="We must make sure that your are a human.">
-        <Row gutter={8}>
-          <Col span={12}>
-            <Form.Item
-              name="captcha"
-              noStyle
-              rules={[{ required: true, message: 'Please input the captcha you got!' }]}
-            >
-              <Input />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Button>Get captcha</Button>
-          </Col>
-        </Row>
-      </Form.Item> */}
 
-      {/* <Form.Item
-        name="agreement"
-        valuePropName="checked"
-        rules={[
-          {
-            validator: (_, value) =>
-              value ? Promise.resolve() : Promise.reject(new Error('Should accept agreement')),
-          },
-        ]}
-        {...tailFormItemLayout}
-      >
-        <Checkbox>
-          I have read the <a href="">agreement</a>
-        </Checkbox>
-      </Form.Item> */}
       <Form.Item {...tailFormItemLayout}>
       <Button type="primary" htmlType="submit" Click={onFinish
       }>
@@ -382,4 +305,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Inline_Form;
